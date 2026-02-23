@@ -1,0 +1,18 @@
+REGARDING THE POKÉMON BLUE ROM
+==============================
+
+This repository does not include a Pokémon Blue ROM file.
+
+Pokémon Blue (Game Boy, 1996) is copyrighted software owned by Nintendo and Game Freak.
+Distributing ROM files without authorization is a violation of copyright law.
+
+To run ANIMUS, you must provide your own legally obtained copy of the ROM.
+The expected filename is: pokemon_azul.gb (or rename your file accordingly)
+
+ANIMUS is environment-agnostic in principle. Pokémon Blue was chosen as a test
+environment because of its well-documented RAM structure and complex multi-map geography.
+The agent has no knowledge of game mechanics, characters, or narrative — it perceives
+only map ID and (x, y) coordinates.
+
+Future versions may support open-source or custom environments that do not
+require third-party software.
