@@ -21,6 +21,27 @@ Tested in Pokémon Blue: starting from a single room, the agent autonomously dis
 ## Run
 python conscious_agent_v16.py pokemon_azul.gb 200000
 
+## ANIMUS Web — Update v2.0
+
+The same principle, now exploring the open web.
+
+Starting from a random Wikipedia page about an Iranian village,
+the agent developed spontaneous attraction to neuroscience and 
+scientific research after 800 pages — without any instruction.
+
+**Results after 800 pages:**
+- 2,524 emergent conceptual criteria
+- Top domains: ScienceDaily, BBC, ArXiv, Nature
+- Top concepts: scientists, brain, researchers, arxiv
+- Concept evolution: geography → neuroscience → stable science identity
+
+Run:
+```
+pip install requests beautifulsoup4
+python animus_web.py 500
+
+
+
 ## Support
 
 If this project was useful to you, USDT donations are welcome:
