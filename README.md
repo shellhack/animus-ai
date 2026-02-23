@@ -20,3 +20,13 @@ Tested in Pokémon Blue: starting from a single room, the agent autonomously dis
 
 ## Run
 python conscious_agent_v16.py pokemon_azul.gb 200000
+
+## Support
+
+If this project was useful to you, USDT donations are welcome:
+
+BEP20: 0x682d792095ec89176af6d6d736388d61ea54f5d5 TRC20: TBBpUCkhSc9EuverYayokZzWP2xLfCTx2R
+
+ERC20: 0x682d792095ec89176af6d6d736388d61ea54f5d5
+
+TRC20: TBBpUCkhSc9EuverYayokZzWP2xLfCTx2R
