@@ -1,0 +1,9 @@
+{
+  "nodes": [
+    {"label": "Origen: Feb 23", "content": "Ejemplo de nodo de origen", "era": "2026-02", "weight": 16880.0, "connections": 45},
+    {"label": "fracaso", "content": "Token de tension", "era": "2026-02", "weight": 500.0, "connections": 12}
+  ],
+  "edges": [
+    {"from": 0, "to": 1, "weight": 35.0}
+  ]
+}
