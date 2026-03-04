@@ -1,0 +1,6 @@
+nacimiento.txt
+animus_memory.json
+memoria_business.json
+animus_memory_backup*.json
+target/
+*.exe
