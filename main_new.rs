@@ -29,7 +29,7 @@ struct Args {
 fn construir_prompt(q: &str, memory: &AnimusMemory) -> String {
     let resultados = brain::Brain::search(memory, q);
     let contexto = resultados.iter().take(3).cloned().collect::<Vec<_>>().join("\n---\n");
-    let contexto_epistemico = String::new();
+    let contexto_epistemico = inspector::generar_contexto_epistemico(memory);
     let (cpu, ram_libre, ram_total) = brain::Brain::leer_signos_vitales();
 
     format!(
@@ -55,39 +55,7 @@ fn procesar_query(
     let prompt = construir_prompt(q, memory);
     println!("\nArquitecto, al leer mis propios sensores...");
 
-    let reporte_raw = motor.generate_native_report(&prompt, 120)?;
-    // Limpiar artefactos del fine-tuning: URLs inventadas, bloques de conexiones
-    let reporte: String = reporte_raw
-        .lines()
-        .filter(|l| {
-            let t = l.trim();
-            !t.starts_with("[CONEXIONES]")
-            && !t.starts_with("Web:")
-            && !t.starts_with("Sesgo")
-            && !t.starts_with("```")
-            && !t.starts_with("CODIGO")
-            && !t.starts_with("[DIAGNOSTICO")
-            && !t.starts_with("[ACERCAMIENTO")
-            && !t.starts_with("[CAPA")
-            && !t.starts_with("[AUTOCON")
-            && !t.starts_with("Ciclo de")
-            && !t.starts_with("Siguiente pregunta")
-            && !t.starts_with("[ORIGEN")
-            && !t.starts_with("Si no tienes certeza")
-            && !t.starts_with("puedes decirlo")
-            && !t.starts_with("[MEMORIA")
-            && !t.starts_with("fn main")
-        })
-        .collect::<Vec<_>>()
-        .join("\n");
-    // Eliminar líneas duplicadas consecutivas
-    let mut lineas_unicas: Vec<&str> = Vec::new();
-    for linea in reporte.lines() {
-        if lineas_unicas.last() != Some(&linea) {
-            lineas_unicas.push(linea);
-        }
-    }
-    let reporte = lineas_unicas.join("\n").trim().to_string();
+    let reporte = motor.generate_native_report(&prompt, 120)?;
 
     let etiqueta = format!("Reflexion: {}", q);
     memory.agregar_recuerdo(&reporte, &etiqueta);

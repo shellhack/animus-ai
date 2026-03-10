@@ -4,3 +4,28 @@ memoria_business.json
 animus_memory_backup*.json
 target/
 *.exe
+
+autorretrato/*.md
+# Modelos
+model_3b/
+model_3b_clean/
+model_gguf/
+modelos/
+*.gguf
+*.safetensors
+*.zip
+*.bin
+
+# Archivos temporales
+debug_output.txt
+check_dupes.py
+deduplicar.py
+reparar.py
+fix_fpga.py
+ingerir_fpga.py
+animus_memory.json.bak
+__pycache__/
+*.pyc
+
+# Autoretratos
+autorretrato/
