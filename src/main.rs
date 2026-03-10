@@ -55,7 +55,7 @@ fn procesar_query(
     let prompt = construir_prompt(q, memory);
     println!("\nArquitecto, al leer mis propios sensores...");
 
-    let reporte_raw = motor.generate_native_report(&prompt, 120)?;
+    let reporte_raw = motor.generate_native_report(&prompt, 400)?;
     // Limpiar artefactos del fine-tuning: URLs inventadas, bloques de conexiones
     let reporte: String = reporte_raw
         .lines()
@@ -149,14 +149,80 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
     // -- Modo Autonomo ---------------------------------------------------------
     if args.autonomous {
         let archivo_tareas = "tareas_pendientes.txt";
+        let archivo_ciclos = "ciclos_autonomos.txt";
 
         if !Path::new(archivo_tareas).exists() {
             fs::write(archivo_tareas, "")?;
         }
 
-        println!("Modo autonomo activo. Ctrl+C para detener.\n");
+        // Leer ciclo actual
+        let ciclo_actual: u32 = fs::read_to_string(archivo_ciclos)
+            .unwrap_or_default()
+            .trim()
+            .parse()
+            .unwrap_or(0);
+
+        let mut ciclo = ciclo_actual;
+        let intervalo_sintesis: u32 = 10;
+
+        println!("Modo autonomo activo. Ciclo: {}. Ctrl+C para detener.\n", ciclo);
+
+        let mut gaps_recientes: std::collections::HashSet<String> = std::collections::HashSet::new();
 
         loop {
+            ciclo += 1;
+            fs::write(archivo_ciclos, ciclo.to_string())?;
+
+            // -- Ciclo de sintesis cada 10 ciclos normales --
+            if ciclo % intervalo_sintesis == 0 {
+                println!("\n🧬 CICLO DE SÍNTESIS #{} — Comprimiendo grafo...\n", ciclo);
+
+                // Tomar los 5 nodos de mayor peso del grafo episódico
+                let mut nodos_top: Vec<(String, f64)> = memory
+                    .nodes
+                    .iter()
+                    .map(|n| (n.label.clone(), n.weight))
+                    .collect();
+                nodos_top.sort_by(|a, b| b.1.partial_cmp(&a.1).unwrap());
+                nodos_top.truncate(5);
+
+                let labels: Vec<String> = nodos_top.iter().map(|(l, _): &(String, f64)| l.clone()).collect();
+
+                let prompt_sintesis = format!(
+                    "TAREA DE SÍNTESIS. Tus 5 nodos de mayor peso son: {}. \
+                    Lista exactamente las conexiones faltantes en formato: \
+                    NODO_A -> NODO_B | razon_en_una_frase | ALTA/MEDIA/BAJA. \
+                    Máximo 5 conexiones. Solo las que puedas justificar. \
+                    Si no puedes justificar ninguna, escribe: SIN CONEXIONES JUSTIFICABLES.",
+                    labels.join(" | ")
+                );
+
+                match procesar_query(&prompt_sintesis, &mut memory, &mut motor) {
+                    Ok(_) => {
+                        println!("✅ Síntesis completada.");
+                        // Persistir hipótesis de síntesis en memoria de sabiduría
+                        if let Some(ultimo_nodo) = memory.nodes.last() {
+                            if let Some(mut bm) = memory::AnimusMemory::load_business_memory() {
+                                bm.conexiones.insert(
+                                format!("sintesis_autonoma->{}", ultimo_nodo.label),
+                                1.5,
+                                );
+                                if let Ok(json) = serde_json::to_string_pretty(&bm) {
+                                    let _ = fs::write("src/memoria_business.json", json);
+                                }
+                                println!("🧠 Hipótesis integrada en memoria de sabiduría.");
+                            }
+                        }
+                    },
+                    Err(e) => println!("⚠️ Error en síntesis: {}", e),
+                }
+
+                println!("Enfriando 30s...\n");
+                thread::sleep(Duration::from_secs(30));
+                continue;
+            }
+
+            // -- Ciclo normal: procesar tareas --
             let contenido = fs::read_to_string(archivo_tareas).unwrap_or_default();
             let lineas: Vec<&str> = contenido
                 .lines()
@@ -164,13 +230,95 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
                 .collect();
 
             if lineas.is_empty() {
-                println!("Sin tareas. Revisando en 30s...");
-                thread::sleep(Duration::from_secs(30));
-                continue;
+                // Sin tareas: ANIMUS elige su propia tarea desde knowledge gaps
+                println!("[Ciclo {}] Sin tareas externas. Buscando gap en el grafo...", ciclo);
+
+                let mut nodos_gap: Vec<(String, f64)> = memory
+                    .nodes
+                    .iter()
+                    .filter(|n| n.weight > 1.0 && n.weight < 5000.0 
+                        && !n.label.starts_with("Web:")
+                        && !n.label.starts_with("Reflexion:")
+                        && !n.label.starts_with("Origen:")
+                        && !n.label.starts_with("Mi Origen")
+                        && !n.label.starts_with('¿'))
+                    .map(|n| (n.label.clone(), n.weight))
+                    .collect();
+                nodos_gap.sort_by(|a, b| a.1.partial_cmp(&b.1).unwrap());
+
+                if let Some((label, _)) = nodos_gap 
+                        .iter()
+                        .find(|(l, _)| !gaps_recientes.contains(l.as_str()))
+                {    
+                    let label = label.clone();
+                    let tarea_autonoma = format!(
+                        "Responde esta pregunta desde tus patrones validados: {}",
+                        label
+                    );
+                    println!("🔎 Gap detectado: {}", label);
+                    gaps_recientes.insert(label.clone());
+                    // Limpiar memoria cada 20 gaps para no crecer indefinidamente
+                    if gaps_recientes.len() > 20 {
+                        gaps_recientes.clear();
+                    }
+                    match procesar_query(&tarea_autonoma, &mut memory, &mut motor) {
+                        Ok(_) => println!("✅ Gap investigado."),
+                        Err(e) => {
+                            println!("⚠️ Error: {}", e);
+                            if e.to_string().contains("error sending request") {
+                                println!("🔄 Reconectando servidor...");
+                                let _ = motor.reiniciar_servidor();
+                            }
+                        },
+                    }
+                    thread::sleep(Duration::from_secs(30)); 
+                    continue;
+                    } else {
+                        println!("[Ciclo {}] Sin gaps. Scrapeando fuente web...", ciclo);
+                        let output = std::process::Command::new("python")
+                            .arg("fetcher_autonomo.py")
+                            .output();
+                    
+                        match output {
+                            Ok(out) => {
+                                let json_str = String::from_utf8_lossy(&out.stdout);
+                                if let Ok(val) = serde_json::from_str::<serde_json::Value>(&json_str) {
+                                    if val["ok"].as_bool().unwrap_or(false) {
+                                        let url = val["url"].as_str().unwrap_or("web");
+                                        let episodic = val["episodic"].as_str().unwrap_or("");
+                                        let label = format!("Web: {}", url.split('/').last().unwrap_or(url));
+                                        brain::Brain::integrate_knowledge(&mut memory, &label, episodic);
+                                        memory.save().ok();
+                                        println!("🌐 Integrado: {}", label);
+
+                                        // Razonar sobre el contenido recién scrapeado
+                                        let tarea_web = format!(
+                                            "Extrae patrones nuevos de este contenido y conéctalos con lo que ya sabes: {}",
+                                            &episodic[..episodic.len().min(500)]
+                                        );
+
+                                        match procesar_query(&tarea_web, &mut memory, &mut motor) {
+                                            Ok(_) => println!("🧠 Patrones extraídos."),
+                                            Err(e) => {
+                                                if e.to_string().contains("error sending request") {
+                                                    let _ = motor.reiniciar_servidor();
+                                                }
+                                            }
+                                        }
+
+                                    }
+                                }
+                            },
+                            Err(e) => println!("⚠️ Error scraping: {}", e),
+                        }
+                        thread::sleep(Duration::from_secs(30));
+                        continue;
+                }
             }
 
+            // Hay tareas en cola — procesar la primera
             let tarea = lineas[0].to_string();
-            println!("[{}/{}] {}", 1, lineas.len(), tarea);
+            println!("[Ciclo {} — {}/{}] {}", ciclo, 1, lineas.len(), tarea);
 
             let resto = lineas[1..].join("\n");
             let nuevo_contenido = if resto.is_empty() {
@@ -181,14 +329,14 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
             fs::write(archivo_tareas, nuevo_contenido)?;
 
             match procesar_query(&tarea, &mut memory, &mut motor) {
-                Ok(_) => println!("Completada."),
-                Err(e) => println!("Error: {}", e),
+                Ok(_) => println!("✅ Completada."),
+                Err(e) => println!("⚠️ Error: {}", e),
             }
 
             println!("Enfriando 15s...\n");
             thread::sleep(Duration::from_secs(15));
         }
-    }
+    }   
 
     println!("Uso: --query \"pregunta\" | --voz --query \"pregunta\" | --autonomous");
     Ok(())
