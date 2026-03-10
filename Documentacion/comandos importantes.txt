@@ -1,0 +1,26 @@
+# Crear ANIMUS-FIN
+xcopy C:\projects\animus_rust C:\projects\animus_fin /E /I /Q
+copy C:\projects\animus_rust\instancias\memoria_animus_fin.json C:\projects\animus_fin\memoria_business.json
+
+# Crear ANIMUS-GOV
+xcopy C:\projects\animus_rust C:\projects\animus_gov /E /I /Q
+copy C:\projects\animus_rust\instancias\memoria_animus_gov.json C:\projects\animus_gov\memoria_business.json
+
+# Crear ANIMUS-TECH
+xcopy C:\projects\animus_rust C:\projects\animus_tech /E /I /Q
+copy C:\projects\animus_rust\instancias\memoria_animus_tech.json C:\projects\animus_tech\memoria_business.json
+
+
+
+cd C:\projects\animus_fin
+cargo build --release
+.\target\release\animus_rust --autonomous
+
+cd C:\projects\animus_gov
+cargo build --release
+.\target\release\animus_rust --autonomous
+
+
+cd C:\projects\animus_tech
+cargo build --release
+.\target\release\animus_rust --autonomous

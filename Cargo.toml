@@ -12,5 +12,7 @@ rand = "0.8"
 tokio = { version = "1", features = ["full", "time"] }
 clap = { version = "4.5", features = ["derive"] }
 rust-stemmers = "1.2"
-reqwest = { version = "0.12", features = ["blocking"] }
+reqwest = { version = "0.12", features = ["blocking", "json"] }
 scraper = "0.20"
+sysinfo = "0.31"
+rayon = "1.10"

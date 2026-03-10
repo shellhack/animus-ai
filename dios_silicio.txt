@@ -1,0 +1,920 @@
+0:00
+Durante años te han hecho creer que el
+0:02
+procesador de tu ordenador, esa pequeña
+0:04
+pieza de silicio por la que has pagado
+0:06
+una fortuna, es el cerebro definitivo.
+0:08
+Te han dicho que es inteligente, rápido
+0:10
+y poderoso, pero la realidad es mucho
+0:13
+más decepcionante. Tu procesador es una
+0:15
+estatua. Es una maravilla de la
+0:16
+ingeniería, claro, pero es una maravilla
+0:19
+muerta, incluso grabada en piedra,
+0:21
+incapaz de aprender trucos nuevos. Una
+0:23
+vez que sale de la fábrica, si el mundo
+0:25
+cambia, tu procesador se queda obsoleto.
+0:28
+Pero, ¿y si te dijera que existe un dios
+0:29
+del silicio, el cual rompe las leyes de
+0:32
+la física? ¿Y si existiera un chip que
+0:34
+no es sólido sino líquido? ¿Un
+0:36
+componente capaz de recablear sus
+0:38
+propios átomos en milisegundos para
+0:40
+convertirse en lo que tú necesites? que
+0:42
+por la mañana se despierte siendo una
+0:44
+tarjeta gráfica, a mediodía se
+0:46
+transforme físicamente en el cerebro de
+0:48
+un misil balístico y por la noche no
+0:50
+solo sea ese aparato que te consuela,
+0:52
+sino sea la consola de videojuegos
+0:54
+exacta que tenías en los años 90. Pues
+0:57
+esta tecnología no es ciencia ficción,
+0:59
+es el secreto mejor guardado de la
+1:01
+industria, la magia negra que hace
+1:03
+funcionar desde las antenas 5G hasta los
+1:05
+algoritmos que roban millones en Wall
+1:07
+Street. Hoy vamos a destapar la caja de
+1:09
+Pandora de las FPGA. Prepárate porque
+1:12
+vamos a viajar por 30 años de guerras
+1:14
+corporativas y por supuesto por sus
+1:16
+traiciones. Veremos cómo Intel compró un
+1:18
+Ferrari por 16,000 solo para estrellarlo
+1:21
+con un muro. Descubriremos por qué tu
+1:23
+emulador de PC es una mentira y vamos a
+1:26
+entender cómo es que AMD terminó
+1:28
+conquistando al mundo con un chip que
+1:30
+puede cambiar de forma. Así que ponte el
+1:33
+pantalón, prepara tu desayuno y olvida
+1:35
+todo lo que sabes sobre el hardware,
+1:37
+porque hoy el silicio cobra vida. Pero
+1:39
+antes, un mensaje de nuestro sponsor.
+1:42
+Espera un momento. ¿Quieres conseguir tu
+1:44
+Windows y tu Office totalmente legal y a
+1:46
+un precio realmente bajo? Pues aquí te
+1:49
+traigo el mejor sitio confiable donde
+1:51
+puedes comprar tu licencia tanto como
+1:52
+para Office como para Windows. Y también
+1:54
+si los quieres comprar en paquete, ¿por
+1:56
+qué no? Porque aquí vas a poder
+1:58
+conseguir desde el mismísimo Office 2016
+2:00
+Professional Plus hasta el Office 2024
+2:03
+Home. Y déjame decirte que no tienes
+2:05
+nada de qué preocuparte porque te los
+2:07
+traigo con un descuento del 62%.
+2:10
+Y si te preguntas qué hay para activar
+2:12
+tu Windows, pues vas a poder encontrar
+2:13
+desde la licencia de Windows 10 Home
+2:15
+hasta la de Windows 11 Pro. Y no solo
+2:18
+eso, porque no voy a permitir que te
+2:20
+comas el precio completo y te traigo un
+2:23
+descuento del 50% para tu licencia de
+2:25
+Windows. Y como bien te lo dije, si
+2:27
+quieres combinar y comprar tanto como
+2:29
+Office como Windows 11, también están en
+2:32
+descuento del 62%.
+2:34
+Así que corre y compra tus licencias.
+2:37
+Pero ahora sí, continuemos con este
+2:39
+video. Nuestro viaje comienza en la
+2:41
+década de los 70s, una época oscura
+2:43
+donde diseñar hardware era un deporte de
+2:45
+riesgo. Si eras ingeniero en 1975 y
+2:48
+querías hacer un circuito, tenías dos
+2:50
+opciones y las dos eran terribles. La
+2:53
+primera era usar lógica discreta. Eso
+2:55
+significaba comprar palés enteros de
+2:57
+chips básicos de la serie 7400 TTL.
+3:00
+Tenías que soldar cientos de estos
+3:02
+bichos a mano en una placa gigante y si
+3:04
+querías cambiar una función tenías que
+3:06
+resoldar todo. Era lento, consumía más
+3:09
+luz que un casino y era una pesadilla de
+3:11
+cables. La segunda opción era para los
+3:13
+millonarios, los Asic o application
+3:16
+Specific Integrated Circuit. Básicamente
+3:19
+pedías a una fábrica que te hicieran un
+3:20
+chip a medida. Quedaba perfecto, como
+3:23
+fundir una estatua de bronce sólida.
+3:25
+Pero por supuesto esto era rígido. Si
+3:27
+cometías un error en el diseño y ponías
+3:30
+algo donde no iba, tenías que tirar a la
+3:32
+basura medio millón de dólares. A esto
+3:34
+se le llama riesgo de ingeniería o
+3:36
+también podemos llamarlo un despido
+3:38
+fulminante. La industria necesitaba un
+3:40
+punto medio y a finales de los 70s,
+3:43
+empresas como Snetics y Monolic Memories
+3:45
+lanzaron pla
+3:48
+y Pal Programmable Array Logic. Eran
+3:51
+chips programables, sí, pero utilizaban
+3:53
+fusibles. Una vez que los quemabas para
+3:55
+programarlos, no había vuelta atrás. Y
+3:57
+si te equivocabas en una línea de
+3:59
+código, el chip se convertía en basura.
+4:01
+Pero en 1983, justo antes de la
+4:03
+revolución, nació una empresa llamada
+4:05
+Altera. Ellos no inventaron la FPGA,
+4:08
+pero perfeccionaron el eslabón perdido,
+4:10
+los CPLD o Complex Programmable Logic
+4:13
+Devices con su serie EP300, la cual
+4:16
+tenía una ventana de cuarzo real para
+4:19
+borrarla con una luz ultravioleta, luego
+4:21
+la mítica Max 7000. Crearían chips que
+4:24
+eran rápidos y lo más importante no eran
+4:26
+volátiles. Esto significaba que no
+4:28
+olvidaban su configuración al apagarse,
+4:30
+ofreciendo la función instant on. Así
+4:33
+que Altera se hizo de oro dominando este
+4:35
+mercado. Y mientras Saltera jugaba con
+4:37
+los CPLD en 1984, un visionario llamado
+4:42
+Ross Freeman, que trabajaba en Sillock,
+4:44
+tuvo una idea que sonaba locura y dijo,
+4:46
+"Oye, ¿y si hacemos un chip lleno de
+4:48
+transistores desconectados y utilizamos
+4:50
+memoria RAM para decirle cómo
+4:52
+conectarse?" Sus jefes se rieron de él
+4:54
+porque los transistores eran carísimos,
+4:56
+pero Ross conocía la ley de Moore y
+4:58
+sabía que el silicio sería gratis algún
+5:00
+día. Así que en ese mismo año 1984, Ross
+5:04
+fundó a Shining e inventó el modelo
+5:07
+Fabeless, diseñar sin tener fábrica. A
+5:09
+finales de 1985 lanzarían el XC 2064, la
+5:14
+primer FPGA comercial de la historia.
+5:17
+Pero, ¿qué demonios significan estas
+5:19
+siglas? Field programmable Gate Ari
+5:21
+suena un conjunto arcano, pero es muy
+5:24
+simple. Gate ar significa matriz de
+5:26
+compuertas, es decir, un ejército de
+5:28
+bloques lógicos listos para recibir
+5:30
+órdenes. Programmable es obvio, lo
+5:32
+puedes programar, pero la verdadera
+5:34
+magia está en esa F. Field significa
+5:37
+campo. Y es tan importante porque antes
+5:40
+para poder cambiar un chip tenías que
+5:41
+mandarlo a la fábrica. Ahora podías
+5:43
+reprogramarlo tú mismo en este mismo
+5:46
+campo, en tu laboratorio o en tu casa
+5:48
+tomando un cafecito. A diferencia de los
+5:51
+fusibles, la XC2064 usaba S RAM o static
+5:55
+RAM. Podías borrarla y reprogramarla
+5:57
+infinitas veces. Era como una pizarra
+5:59
+blanca, pero una pizarra que tenía 64
+6:02
+CLBs o compyable Logic Blocks. ¿Y qué es
+6:05
+un CLB? Es una caja de herramientas
+6:07
+universal que contiene loots oup tables.
+6:10
+La FPGA no calcula 1 + 1 es ig a 2. Mira
+6:14
+una tabla de memoria donde ya está
+6:15
+escrito el resultado. Sí, hay que
+6:17
+reconocer que esto es trampa, pero no
+6:19
+podemos negar que sigue siendo rápido.
+6:21
+Sin embargo, no estaban solos porque en
+6:24
+el año 1985 también apareció la dis
+6:27
+semiconductor que se especializó en
+6:29
+chips más pequeños como las Gal y en
+6:31
+1988 surgió Actel. Al día de hoy se
+6:34
+llaman Microchip, pero llegaron con una
+6:36
+propuesta radical, las FPGAs antife.
+6:40
+Estas no usaban RAM, creaban conexiones
+6:42
+permanentes antiradiación para el
+6:43
+espacio. Y más tarde Actaría las
+6:46
+familias Iglue Lu y Proasic basados en
+6:49
+la memoria Flash, que combinan lo mejor
+6:51
+de dos mundos, son reprogramables y no
+6:53
+son volátiles. Pero al entrar en los
+6:56
+años 90, Shy Linkx lanzó la serie
+6:58
+XC4000, que se convirtió en el estándar
+7:00
+absoluto de la industria, pero altera
+7:02
+contraatacó a mediados de la década, ya
+7:05
+que traerían a la familia Flex 10K. Este
+7:07
+fue un momento histórico. Fue la primera
+7:09
+vez que alguien metió bloques de memoria
+7:11
+RAM en bed arlocks dentro de la lógica
+7:14
+del chip, permitiendo almacenar datos
+7:16
+sin salir fuera. La competencia se
+7:19
+volvió tan feroz que ambas empresas
+7:21
+acabaron en los tribunales. Sh Linkx
+7:23
+demandó a Altera por infringir la
+7:24
+patente Freeman 363, la idea original de
+7:28
+FPGA. Altera demandó a Shink por sus
+7:30
+patentes de borrado. Estuvieron 7 años
+7:33
+gastando millones en abogados hasta
+7:34
+firmar la paz en el año 2001. Y mientras
+7:37
+se peleaban defendiendo las clases
+7:39
+sociales del hardware, Shy Linkx creó
+7:41
+Virtex. Este fue para los ricos.
+7:43
+Radares, satélites, cosas de
+7:45
+millonarios. Y Spartan seguía siendo
+7:47
+para los pobres y llenaron el hueco con
+7:50
+Kintex y Artrix, pero Altera, por otra
+7:53
+parte respondería con Strats en la gama
+7:55
+alta y Ciclón en la gama baja. Quédate
+7:57
+con el nombre de Ciclón porque este será
+7:59
+vital en el futuro. Luego, en el año
+8:01
+2001 traerían la paz legal y nuevas
+8:04
+innovaciones. Como las FPGAs eran
+8:06
+tontas, eran puro músculo, pero no
+8:08
+tenían cerebro, inventaron los soft
+8:10
+cores, el microblaze de Shylingx
+8:13
+y el Neos 2 de Altera. eran procesadores
+8:16
+fantasmas hechos con código HDL que
+8:19
+vivían dentro de la FPGA. Y por otra
+8:21
+parte también resolvieron el problema de
+8:23
+la seguridad porque como las FPGAs de
+8:25
+Shilink y Altera eran volátiles, se
+8:28
+borraban al apagarse, entonces
+8:30
+necesitaban cargar el diseño o el
+8:32
+bitstream desde una memoria flash
+8:33
+externa al arrancar. Para evitar robos
+8:35
+de propiedad intelectual implementaron
+8:37
+la encriptación AS256.
+8:40
+Y si no tienes la clave, el chip es un
+8:41
+ladrillo y no puedes copiar el diseño.
+8:44
+Pero la década también trajo un
+8:45
+cementerio de empresas que fallaron.
+8:47
+Tábula prometió una tecnología Spacime
+8:49
+en 3D a 1.6 GHz y quebró en 2015 porque
+8:53
+sus chips se sobrecalentaban. Y Madar,
+8:56
+por otra parte, fracasó con sus FPOSAS y
+8:58
+Tierlogic intentó apilar la memoria
+9:00
+sobre lógica y colapsó. Ambrick falló
+9:03
+con el procesamiento paralelo masivo y a
+9:05
+Cornix intentó vender FPGASAs asíncronas
+9:08
+sin reloj y tuvo que alardear para poder
+9:11
+sobrevivir. Y entonces, en el año 2011,
+9:13
+Shilink inventó la tecnología SSI,
+9:17
+Stacket Silicon Interconnect. Esto con
+9:19
+la gigantesca Vertex 7000T. Cortaron el
+9:22
+chip en cuatro trozos y los pegaron
+9:24
+sobre un interposer de silicio pasivo.
+9:27
+Fue el nacimiento de la tecnología 2.5D,
+9:30
+el abuelo de los modernos chiplets.
+9:32
+Además, introdujeron la DPR o Dynamic
+9:35
+partial Reconfiguration, que permitía
+9:37
+cambiar una parte del cerebro de la FPGA
+9:39
+mientras el resto sigue funcionando. Así
+9:42
+que si lo piensas un poco, este hardware
+9:43
+ya era cosa seria. Entonces, en el año
+9:46
+2011 y 2012, Shilx y Altera se dieron
+9:49
+cuenta de que los softes eran lentos,
+9:52
+así que hicieron lo impensable. Pegaron
+9:54
+un procesador ARM físico de silicio duro
+9:57
+junto a la FPGA en el mismo chip. Y así
+10:00
+es como nacería la familia San de Shilx
+10:02
+y Ciclón 5 Soc para Altera para que
+10:05
+hablaran entre sí a velocidades de
+10:07
+vértigo. Estandarizaron el Bus Axi, la
+10:10
+cual significa Advance Extensible
+10:13
+Interface, una autopista interna de
+10:15
+datos. Pero aquí es donde comenzó una
+10:17
+revolución silenciosa que llega hasta el
+10:19
+día de hoy. Risk 5. La comunidad se
+10:22
+cansó de pagar licencias por Microblaze
+10:24
+o NEOS. Empezaron a meter núcleos Risk 5
+10:28
+de código abierto dentro de las FPGAs.
+10:30
+Hoy en día casi nadie usa los
+10:32
+procesadores propietarios antiguos. El
+10:34
+estándar abierto ganó la batalla del
+10:36
+software. En paralelo, la TI
+10:37
+Semiconductor había comprado los chips
+10:40
+IC40. Un hacker llamado Clif Wolf creó
+10:43
+el proyecto Ice Storm, permitiendo por
+10:46
+primera vez programar chips con
+10:47
+herramientas open source, saltando el
+10:49
+software propietario de horribles
+10:51
+marcas. Y aunque no lo creas, esto
+10:53
+democratizó el acceso y permitió que
+10:55
+fabricantes chinos como GoN
+10:57
+semiconductor entraran al mercado con
+10:59
+sus placas baratas Tank Nano. Pero antes
+11:01
+de llegar al presente, hay que abrir el
+11:03
+capo y entender cómo es que estas
+11:05
+bestias se comunicaban con el mundo
+11:07
+real, porque a decir verdad esto es
+11:09
+bastante fascinante. Una FPGA tiene los
+11:11
+CLBs y loots por dentro, los cables de
+11:14
+la matriz de interconexión y los
+11:15
+directores de la orquesta llamados PLL y
+11:18
+MMCM que generan frecuencias de reloj
+11:21
+perfectas. Pero hay una pieza vital de
+11:23
+la que nadie habla, las GPIO o General
+11:27
+Porpose Input output. Tu procesador de
+11:29
+PC normal es como una carcasa con
+11:31
+puertas fijas. El puerto USB solo sirve
+11:33
+para USB. El PCI Express solo sirve para
+11:36
+PC Express. hablan de un voltaje fijo y
+11:38
+un idioma fijo. Pero, ¿qué hay de FPGA?
+11:42
+Pues una FPGA tiene pinos. Sus puertas
+11:45
+hacia el exterior o los GPIO pueden
+11:47
+cambiar de forma, tamaño y de voltaje.
+11:50
+Tú puedes programar el chip totalmente.
+11:52
+Le puedes decir que al día de hoy el PIN
+11:54
+45 se comporta como una salida de video
+11:57
+HDMI a 3.3 V y mañana cambias el código
+12:01
+y ese mismo pin físico se convierte en
+12:03
+una entrada para un cartucho antiguo de
+12:05
+Sega a 5 V o incluso en una señal LVDS
+12:09
+ultra rápida a 1.8 V. son traductores
+12:13
+universales, por eso las FPGA son las
+12:15
+reinas absolutas a la hora de conectar
+12:17
+hardware de los 80 con tecnología del
+12:19
+2026, porque pueden hablar literalmente
+12:22
+cualquier idioma eléctrico que exista.
+12:24
+Así que, como lo puede suponer, con la
+12:26
+tecnología madura explotaron los usos
+12:28
+reales. En el gaming, la comunidad
+12:30
+descubrió que la emulación por software
+12:32
+tenía lag. Entonces, usando la placa
+12:34
+de10 de enano, con un ciclón 5 crearon
+12:37
+el proyecto Mr. FPGA, logrando
+12:40
+simulación perfecta ciclo a ciclo. La
+12:42
+empresa Analog llevó esto a lujo con la
+12:45
+NT Mini, la NES, la SuperNT SNES y la
+12:49
+Mega SG Genesis y la portátil analog
+12:53
+pocket usando FPGs de la familia
+12:55
+Cyclone. Esto para leer los cartuchos
+12:57
+originales sin emulación por software.
+12:59
+Pero esto no terminó aquí porque también
+13:01
+surgieron los escaladores de video. Mike
+13:04
+Chó el Retrot y Matías creó el OSSC open
+13:08
+source scan converter. Estos aparatos
+13:11
+usan una FPGA para multiplicar las
+13:13
+líneas de video de consolas viejas y
+13:15
+mostrarlas en teles añadir lag. Y si
+13:18
+mencionamos más de consolas, no podemos
+13:20
+olvidar las flash cards como el FX Pack
+13:23
+Pro y, por supuesto, antes de la SD2
+13:26
+SNES, que llevaban una FPGA dentro del
+13:28
+cartucho para simular chips de apoyo
+13:30
+como el SuperFX de Star Fox. Y también
+13:33
+aparecieron nuevos actores intentando
+13:35
+romper el duopolio. Fenix con su
+13:37
+arquitectura quantum y Rapid Silicon que
+13:40
+apostó todo por el open source. En el
+13:42
+lado de la codicia, Wall Street empezó a
+13:44
+utilizar FPGs para el high frequency
+13:46
+trading o HFT, ganando millones por
+13:49
+nanosegundos. Y antes de los Asix se
+13:51
+usaron granjas enteras de FPGAs Spartan
+13:54
+6 para minar Bitcoin. Pero aquí es donde
+13:57
+entra nuestro villano azul porque en el
+13:59
+año 2015 Intel compró Altera por tan
+14:02
+solo 16,700 millones dó. Parecía el fin
+14:06
+de la independencia. Intel quería meter
+14:09
+FPGAs en sus servidores SEON, pero la
+14:11
+gestión fue desastrosa. Los problemas de
+14:13
+fabricación de Intel en los 10 nanm
+14:15
+arrastraron altera al fondo y alguien le
+14:18
+respondería. En el año 2020 AMD compró
+14:21
+Shy Link por la cifra récord de
+14:23
+35,000ones
+14:25
+y esto fue un éxito rotundo. Crearon a
+14:27
+Versal, un chip que ya no es FPGA, es
+14:30
+ACAP, que significa Adaptive
+14:32
+Computelation Platform, integrando
+14:34
+motores de inteligencia artificial
+14:36
+dedicados. Y hay que reconocer que el
+14:38
+futuro ya está aquí, principalmente con
+14:40
+el estándar UCI, Universal Chiplate
+14:43
+Interconnect Express. A partir de ahora,
+14:45
+las CFPGA se diseñan como chiplet o
+14:47
+piezas de Lego que se pueden pegar a
+14:49
+cualquier CPU moderna utilizando este
+14:51
+estándar abierto. Pero aunque parece que
+14:53
+la historia ya terminó, su final
+14:55
+llegaría en el año 2024. Intel anunció
+14:58
+su divorcio. Se separan de Altera como
+15:00
+empresa independiente de nuevo bajo la
+15:02
+marca Altera an Intel Company. Entonces,
+15:05
+¿qué fue lo que pasó a final de cuentas?
+15:07
+Ross Freeman murió en el año 1989. se
+15:10
+fue demasiado pronto, apenas unos años
+15:13
+después de fundar Shy Linkx, víctima de
+15:15
+una enfermedad que no pudo reprogramar.
+15:17
+Y lo peor es que se marchó sin saber que
+15:19
+su pequeña idea, esa locura de gastar
+15:21
+transistores para conectar cables, se
+15:23
+convertiría en la columna vertebral de
+15:25
+nuestra civilización, ni como décadas
+15:27
+después salvaría nuestros recuerdos más
+15:29
+preciados de la extinción, porque hay
+15:31
+una verdad incómoda que a menudo
+15:33
+olvidamos. El hardware muere. Esa Super
+15:35
+Nintendo de tu infancia, esa Mgadrive
+15:37
+que tienes guardada en el armario se
+15:39
+están muriendo. Los condensadores se
+15:41
+secan, las pistas de cobre se corroen,
+15:43
+el plástico se quebranta. El silicio
+15:46
+físico tiene fecha de caducidad y
+15:48
+estamos destinados a perder la historia
+15:50
+digital, a ver cómo nuestras catedrales
+15:52
+de tecnología se convierten en polvo y
+15:54
+óxido. O al menos eso es lo que
+15:56
+creíamos, porque las FPGAS nos han
+15:58
+regalado algo que parecía imposible, la
+16:01
+inmortalidad. Cuando un ingeniero
+16:02
+escribe código en Verilock para
+16:04
+descubrir un chip de hace 40 años, no
+16:07
+está simplemente copiando un juego, está
+16:09
+capturando el alma de la máquina. No es
+16:11
+una imitación, es una resurrección.
+16:14
+Desde los fusibles quemados en los años
+16:16
+70s hasta los gigantescos motores de
+16:18
+inteligencia artificial y los chiplets
+16:20
+de hoy, la historia de FPGA es la
+16:22
+historia de la resistencia humana contra
+16:24
+la obsolescencia. Nos han enseñado que
+16:26
+en un mundo digital que avanza la
+16:28
+velocidad de la luz devorando su propio
+16:30
+pasado, la rigidez es la muerte, la
+16:33
+flexibilidad es el poder supremo. Y el
+16:35
+hardware ya no tiene por qué ser una
+16:37
+ancla pesada que nos ata una época. Se
+16:39
+ha convertido en arcilla viva, en un
+16:41
+lienzo infinito que podemos pintar y
+16:43
+borrar 1 veces. es el único chip capaz
+16:46
+de soñar con ser otra cosa. Y por
+16:48
+supuesto, mientras existan las FPGAs,
+16:51
+mientras quede una sola de estas puertas
+16:53
+lógicas de campo capaz de
+16:54
+reconfigurarse, podemos estar
+16:56
+tranquilos. Ningún chip, ninguna
+16:58
+consola, ningún algoritmo y ninguna idea
+17:01
+humana morirá jamás del todo. El silicio
+17:04
+ha dejado de ser piedra para convertirse
+17:06
+en eterno. Y si te gustaría saber de
+17:08
+algún tema en especial de algún
+17:09
+procesador, puedes hacérmelo saber igual
+17:11
+en la caja de comentarios. Estoy
+17:13
+pensando en abrir un apartado de
+17:15
+encuestas donde ustedes mismos elijan el
+17:17
+próximo tema del video. Así que si estás
+17:19
+escuchando esto, estate atento a las
+17:21
+encuestas porque estaré dejando tres
+17:23
+opciones para el próximo video en la
+17:25
+próxima encuesta del canal. Te invito a
+17:27
+darle like al hyper y a suscribirte.
+17:30
+También a seguirme en mis redes
+17:31
+sociales, las cuales estarás viendo en
+17:33
+pantalla. Y si quieres apoyarme con un
+17:35
+súper, claro que puedes hacerlo. Te dejo
+17:37
+en pantalla cómo hacerlo. Así que yo soy
+17:40
+Alan el gamer desempleado y nos veremos
+17:42
+en el próximo capítulo.
+17:57
+just to keep

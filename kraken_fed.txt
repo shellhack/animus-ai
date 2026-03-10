@@ -1,0 +1,626 @@
+0:00
+Hay algo que nadie me explicó cuando
+0:01
+empecé a programar en la Tam y lo más
+0:03
+frustrante es que no es técnico. Te voy
+0:04
+a decir algo que suena casi ilegal. En
+0:07
+2026 es más fácil que nunca hacer plata
+0:09
+con software en la Tam. Y lo más
+0:10
+doloroso no es que la mayoría de los
+0:12
+desarrolladores no lo sepan, es que sí
+0:13
+lo saben y van a perder esta ventana
+0:15
+igual por una sola razón. Siguen
+0:17
+pensando como empleados. En los próximos
+0:19
+minutos te muestro los tres cambios que
+0:21
+se alinearon para hacer de este el mejor
+0:23
+momento de la historia para construir
+0:24
+ingresos propios desde cualquier país en
+0:26
+Latama. que al final que hasta está
+0:28
+hasta está ahí porque lo más importante,
+0:29
+el error exacto que hacen
+0:30
+desarrolladores, que con todo el talento
+0:32
+del mundo sigan mirando como otros la
+0:34
+rompe mientras ellos aprenden una
+0:36
+tecnología más. En 2020 traté de lanzar
+0:39
+mi primer producto propio, pero me
+0:40
+demoré semanas solo en el Login. Después
+0:42
+las semanalas del sistema de pago y
+0:44
+después el servidor y después los emails
+0:46
+de bienvenidos. Cuando por fin lancé,
+0:48
+nadie lo usó, no porque la idea fuera
+0:49
+mala, sino porque el costo de
+0:50
+experimentar era ridículo. Lanzar era un
+0:52
+proyecto de meses, no un experimento de
+0:54
+un fin de semana. Si me equivocaba en la
+0:56
+dirección, perdía meses y eso me
+0:58
+congelaba antes de empezar. En 2026 ese
+1:01
+cálculo cambió completamente y la
+1:02
+historia de ese producto, lo que pasó
+1:04
+después, te la cuento al final del video
+1:06
+porque tiene un giro que resume todo lo
+1:07
+que voy a explicarte ahora y te explico
+1:09
+por qué. El primer cambio más concreto y
+1:11
+me gusta porque se puede demostrar es
+1:12
+que puedes crear un proyecto muy rápido
+1:14
+con Star Stripe para cobro, configurar
+1:16
+el webhook, el email de bienvenida
+1:18
+automático, etcétera. Todo de forma muy
+1:21
+rápida con inteligencia artificial.
+1:22
+Puedes hacer un producto real
+1:23
+funcionando, cobrando, mandando mail con
+1:25
+métricas, corriendo en un servidor real.
+1:28
+La mayoría son herramientas gratuitas
+1:30
+que puedes usar. Yo aquí le sumaría, por
+1:31
+ejemplo, el costo de la IA que te del
+1:33
+appi de la IA. Yo gasto $00 al mes más o
+1:35
+menos, pero porque la uso
+1:36
+intensivamente, pero con $ podría estar
+1:39
+bastante bien. Entonces, en un con unos
+1:40
+$50 al mes más o menos y la mayor parte
+1:42
+de eso la pagas cuando ya estás
+1:43
+cobrando, podría formar un producto
+1:45
+completo. El tiempo para armar eso desde
+1:47
+hoy y desde cero un fin de semana con
+1:49
+concentración. Pero atención, eso de que
+1:52
+programar ya ahora es más rápido es lo
+1:53
+que el mercado bajó el precio de
+1:55
+equivocarte. Cuando pruebas una idea
+1:57
+cuesta un fin de semana y 50 en vez de 6
+1:59
+meses y miles de dólares. El cálculo del
+2:02
+riesgo cambia radicalmente. Antes
+2:03
+necesitabas estar seguro antes de lanzar
+2:05
+o hoy puedes lanzar para estar seguro. Y
+2:07
+hay algo más en este primer cambio que
+2:09
+nadie está diciendo. Cuando construir se
+2:10
+vuelve más barato, la ventaja
+2:12
+competitiva deja de estar en la
+2:13
+tecnología porque ya no gana el que
+2:15
+tiene el mejor stack, gana el que
+2:16
+entiende mejor el problema. Y ahí es el
+2:18
+punto exacto. El desarrollador
+2:20
+latinoamericano tiene algo que ningún
+2:22
+desarrollador de San Francisco puede
+2:23
+replicar. Pero llego a eso en el cambio
+2:25
+número tres. Pero primero el número que
+2:27
+más me impresionó cuando lo vi. Y
+2:28
+acuérdate del error del final porque es
+2:31
+lo que hace que desarrolladores que
+2:32
+entienden todo esto de todas formas no
+2:34
+lo usan. El cambio dos es que el mercado
+2:36
+de SAS en LATA explotó. Antes de los
+2:38
+números una historia hace 2 años un
+2:39
+desarrollador de Medellín dejó de buscar
+2:41
+clientes en Appwor. En cambio, entró a
+2:43
+10 consultorios dentales y le hizo una
+2:45
+sola pregunta. ¿Cuánto tiempo pierde su
+2:46
+recepcionista el día confirmando citas
+2:48
+por teléfono? La respuesta promedio
+2:49
+fueron 2 horas y construyó un sistema de
+2:51
+recordatorios automáticos por WhatsApp
+2:53
+en 4 semanas. Hoy tiene 34 consultorios
+2:56
+pagando $80 al mes, que son alrededor de
+2:58
+$2,700 de ingresos recurrentes, sin
+3:01
+AppW, sin propuestas, sin clientes que
+3:03
+los presionen por las noches. ¿Por qué
+3:04
+es eso posible y ahora, y no lo era
+3:06
+antes en 5 años atrás, por ejemplo, el
+3:08
+mercado de software como servicio LATAM
+3:10
+llegó a 19,000 millones dó en el 2004 y
+3:13
+se proyecta que para el 2033 sean 66,000
+3:16
+millones, un crecimiento de un 28%
+3:18
+anual, pero ese número no me importa
+3:20
+tanto, lo que sí importa es dónde está
+3:22
+creciendo. son las grandes plataformas
+3:24
+genéricas es el SAS vertical,
+3:26
+herramientas específicas para industrias
+3:28
+específicas. El informe State of SAS de
+3:30
+la TAM del 2024 lo confirma. Las startup
+3:33
+B2B que resuelven problemas concretos de
+3:35
+workflow para pymes están consiguiendo
+3:37
+retornos de adquisición de clientes
+3:39
+superiores al promedio global. Hay
+3:41
+millones de negocios en Colombia, en
+3:42
+México, en Chile, en Argentina que
+3:44
+todavía usan Excel para gestionar cosas
+3:46
+que deberían hacer en un software tienen
+3:48
+el problema, tienen el dinero para pagar
+3:49
+una solución, pero no tienen la
+3:51
+herramienta hecha para ellos. ¿Por qué?
+3:53
+Porque el nicho es demasiado pequeño
+3:54
+para que una empresa grande lo
+3:56
+desarrolle, pero no para ti. En usuarios
+3:58
+pagando $50 al mes son $5,000 de
+4:00
+ingresos recurrentes. En Chile,
+4:01
+Colombia, México, Argentina eso cambia
+4:03
+la vida y no siempre necesitas 100. El
+4:05
+desarrollador de Medellín tiene 34 y ya
+4:07
+superó el sueldo de un senio. Pero
+4:09
+encontrar esos 34 clientes específicos
+4:11
+depende de algo que te prometí explicar
+4:13
+en el cambio tres, algo que Silicon
+4:15
+Valley no puede comprarte. Y una cosa
+4:16
+más antes de seguir, no, no necesitas
+4:18
+equipo para esto. El 39% de los
+4:20
+fundadores de SAS independientes que
+4:22
+están generando ingresos reales operan
+4:25
+solo. W Umbrela, un desarrollador solo
+4:27
+en Europa que decidió que su nicho iba a
+4:29
+ser agencias que administran cierto de
+4:31
+sitios de WARP a la vez, cruzó los
+4:33
+$10,000 de ingresos mensuales
+4:34
+recurrentes en el 2025, completamente
+4:37
+solo, sin inversiones y con fundadores.
+4:39
+Un problema específico, una industria
+4:40
+que lo necesitaba, un desarrollador
+4:42
+solo. Sers simple. Y aquí viene el
+4:43
+cambio número tres, que es la ventaja
+4:45
+del contexto local. Y ahora sí es esta
+4:47
+la ventaja que te prometí. ¿Qué sabe un
+4:48
+desarrollador de Bogotá que ningún
+4:50
+equipo de San Francisco puede saber? Que
+4:51
+en Colombia las clínicas dentales no
+4:52
+cobran por adelantado, que el paciente
+4:54
+paga después del tratamiento, que
+4:56
+cualquier software de gestión de citas
+4:57
+que no tenga esa lógica integrada es
+4:59
+inútil para ellos. Ese es el detalle
+5:01
+invisible desde Silicon Valley, pero tú
+5:03
+lo sabes porque eres de ahí. ¿Qué sabe
+5:05
+un desarrollador de Ciudad de México?
+5:06
+que las traplerías, por ejemplo, ¿qué
+5:08
+sabe un desarrollador de Ciudad de
+5:09
+México? Que las ferreterías locales
+5:11
+venden al crédito a sus clientes de
+5:13
+siempre, sin contrato, sin sistema, solo
+5:15
+un cuaderno y confianza. Cualquier
+5:17
+software de inventario que no maneje esa
+5:19
+lógica informal, no lo van a usar. Un
+5:22
+desarrollador de Santiago sabe que las
+5:23
+clínicas veterinarias, el dueño de las
+5:25
+mascotas, muchas veces no coincide con
+5:27
+quién las trae y eso complica el
+5:29
+historial médico de forma que ningún
+5:31
+sistema genérico contemple. Esos
+5:32
+detalles no están en ningún manual, no
+5:33
+se aprenden en un curso, no se entienden
+5:35
+desde afuera y son exactamente esos
+5:37
+detalles los que convierten un producto
+5:39
+que funciona a es perfecto para mí. La
+5:41
+fórmula que está funcionando es simple.
+5:43
+Software de recomendación solo para
+5:44
+clínicas dentales, sistemas de turno
+5:46
+solo para psicólogos independientes, un
+5:48
+CRM solo para corredores de propiedades,
+5:50
+gestión de crédito informar solo para
+5:52
+ferreterías. Absurdamente específico y
+5:54
+por eso absurdamente rentable. Cuando te
+5:56
+especializas así, dejas de competir con
+5:58
+todos y empiezas a competir con casi
+6:00
+nadie. Puedes cobrar más porque hablas
+6:02
+el idioma del cliente y la flicción de
+6:04
+venta baja porque el producto parece
+6:06
+hecho para ellos porque lo fue. El caso
+6:08
+más extremo de este principio en la TAM
+6:11
+es Cepelin en Chile no crearon
+6:13
+financiamiento para empresas en general,
+6:14
+crearon financiamiento de facturas,
+6:16
+específicamente para pymes que necesitan
+6:18
+pagar sus proveedores antes de que el
+6:19
+cliente les pague a ellos. Un nicho
+6:21
+dentro de un nicho, 445 millones de
+6:24
+dólares levantados, 101 millones en
+6:26
+ingresos el 2024. No te estoy diciendo
+6:29
+que vas a levantar 445 millones, ojalá
+6:31
+que sí. Te estoy diciendo que la lógica
+6:32
+de hiperespecialización funciona desde
+6:34
+el nivel de desarrollador de medí con 34
+6:37
+clínicas hasta el nivel de unicornio. ¿Y
+6:39
+cuál es la pieza clave? El contexto que
+6:41
+hace que esa especialización sea real.
+6:44
+La tienes tú y no la tiene ningún
+6:46
+competidor que llegue desde afuera.
+6:47
+Ahora, lo que nadie te dice, esa ventana
+6:50
+no va a estar abierta siempre. Y no es
+6:51
+teoría, ya pasó antes, el 2018,
+6:53
+construir un SAS para restaurante era un
+6:55
+nicho que casi nadie estaba mirando.
+6:56
+Sistemas de reservas de gestión de
+6:58
+pedidos, control de inventarios para
+6:59
+cocina. Había pocos jugadores, el
+7:01
+cliente no era difícil de conseguir y la
+7:03
+competencia era básicamente un cuaderno.
+7:05
+El que entró en el 2018 tiene hoy
+7:06
+clientes con dos o tres o 4 años de
+7:08
+historial, retención que no se puede
+7:10
+comparar ni comprar, conocimiento del
+7:12
+nicho que no se puede replicar. Y cuando
+7:13
+vino la pandemia y todo el mundo quiso
+7:15
+digitalizar restaurantes de golpe, ellos
+7:17
+ya tenían el producto y la base
+7:19
+instalada. La ventana se cerró. Los que
+7:20
+llegaron en el 2021, 2021, perdón,
+7:23
+tuvieron que pelear contra los que ya
+7:24
+tenían posición. En 2026 hay docenas de
+7:27
+nicho lat en el mismo estado en que
+7:28
+estaban los restaurantes en el 2018.
+7:30
+Clínica veterinaria, estudios jurídicos
+7:32
+pequeños, servicios de limpieza,
+7:33
+peluquerías, barberías, instructores
+7:36
+independientes y ferreterías locales.
+7:37
+Los que entren ahora van a tener en el
+7:39
+2029 lo que los restaurantes tienen hoy.
+7:42
+Tres condiciones alineadas al mismo
+7:43
+tiempo. El costo de construir en mínimos
+7:45
+históricos, el mercado está creciendo un
+7:47
+28% anual y un contexto local que nadie
+7:50
+de afuera tiene. Eso lo pasa dos veces.
+7:52
+Y ahora el error que te prometí al
+7:55
+principio, el error que hace que los
+7:56
+desarrolladores con todo el talento del
+7:58
+mundo vean pasar las ventanas sin
+7:59
+aprovecharlas. No es técnico, no es
+8:01
+falta de capital, no es no conocer el
+8:03
+framework correcto, es seguir pensando
+8:05
+como un empleado en un mundo que ya
+8:06
+cambió. ¿Cuánto puedo cobrar por hora?
+8:08
+¿Cómo consigo un cliente más? ¿Cómo subo
+8:10
+mi tarifa freelance? Son las preguntas
+8:12
+de alguien que está vendiendo su tiempo.
+8:14
+La pregunta correcta es, ¿qué puedo
+8:15
+construir una vez que me pague para
+8:17
+siempre? Esa es la pregunta diferente. Y
+8:19
+el miedo a la IA, ese ruido constante en
+8:22
+todos los grupos de Telegram, Discord,
+8:23
+etcétera, de programador ahora mismo, es
+8:25
+la misma mentalidad disfrazada de una
+8:28
+nueva excusa. El desarrollador que
+8:29
+piensa que la IA me va a reemplazar está
+8:31
+mirando su trabajo desde los ojos de
+8:33
+alguien que vende tiempo. El desarroll
+8:35
+desarrollador, perdón, que piensa, "Voy
+8:37
+a usar la para construir más rápido."
+8:38
+Está mirando desde los ojos de alguien
+8:40
+que construye activo. Misma herramienta,
+8:42
+modelo mental completamente diferente,
+8:44
+resultados completamente diferentes. Y
+8:45
+ese producto que intenté lanzar el 2020
+8:47
+que nadie usó, en 2024 lo relancé, to
+8:49
+las herramientas que te mostré en el
+8:50
+cambio uno, un fin de semana, menos de
+8:52
+50 de infraestructura y tiene algunos
+8:55
+usuarios pagando, poquitos, pero tienen.
+8:57
+Algún día te voy a contar esa historia,
+8:59
+además quiero relanzar la parte 2.0, o
+9:00
+sea, que ahí voy a preparar ese video.
+9:03
+El problema nunca fue la idea, era el
+9:04
+costo de equivocarme, que hacía que
+9:06
+nunca experimentara lo suficientemente
+9:07
+rápido. Cuando ese costo desapareció,
+9:09
+todo lo demás cambió. Y hay un
+9:11
+desarrollador que llevó esta lógica al
+9:13
+extremo más alto posible, que pasó de
+9:15
+estar completamente quebrado en en un
+9:16
+hotel barato de Bangcook el 2013 a
+9:19
+facturar más de 3 millones dólar al año
+9:21
+sin empleados, sin inversiones, sin
+9:23
+clientes activos que le exigieran
+9:24
+tiempo. Y lo más revelador, sigue usando
+9:26
+PHP y jQuery, tecnología que la mayoría
+9:29
+de desarrolladores ya considera
+9:31
+obsoleta. las cinco decisiones
+9:32
+específicas que tomó y cuál de esas
+9:34
+cinco decisiones la mayoría de los
+9:35
+desarrolladores de la Tam está tomando
+9:37
+al revés sin saberlo, están en el vídeo
+9:39
+que aparece ahora en pantalla.
